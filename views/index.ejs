@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    App
+  </title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div id="main_area">
+      <!-- Slider -->
+      <div class="row">
+        <div class="col-sm-6" id="slider-thumbs">
+          <!-- Bottom switcher of slider -->
+          <ul class="hide-bullets">
+
+            <% for(let i = 0; i < 1978; i++) { %>
+              <li class="col-sm-3">
+                <a class="thumbnail" id="carousel-selector-<%= i %>">
+                            <img src="/images/frames/frame_<%= i %>.jpg">
+                        </a>
+              </li>
+              <% } %>
+
+
+          </ul>
+        </div>
+        <div class="col-sm-6">
+          <div class="col-xs-12" id="slider">
+            <!-- Top part of the slider -->
+            <div class="row">
+              <div class="col-sm-12" id="carousel-bounding-box">
+                <div class="carousel slide" id="myCarousel">
+                  <!-- Carousel items -->
+                  <div class="carousel-inner">
+
+                    <% for(let i = 0; i < 1978; i++) { %>
+                      <% if (i == 0) { %>
+                        <div class="active item" data-slide-number="<%= i %>">
+                          <img src="/images/frames/frame_<%= i %>.jpg"></div>
+                        <% } %>
+                          <div class="item" data-slide-number="<%= i %>">
+                            <img src="/images/frames/frame_<%= i %>.jpg"></div>
+                          <% } %>
+
+
+
+                  </div>
+                  <!-- Carousel nav -->
+                  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                </a>
+                  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--/Slider-->
+      </div>
+
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/javascripts/core.js"></script>
+</body>
+
+</html>
