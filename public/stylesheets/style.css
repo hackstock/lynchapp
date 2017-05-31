@@ -8,6 +8,11 @@
     padding: 0;
 }
 
+.carousel{
+    position: fixed;
+    top: 20px;
+}
+
 .carousel-inner>.item>img, .carousel-inner>.item>a>img {
     width: 100%;
 }
