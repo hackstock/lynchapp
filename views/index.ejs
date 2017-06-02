@@ -22,7 +22,7 @@
             <% for(let i = 0; i < 1978; i++) { %>
               <li class="col-sm-3">
                 <a class="thumbnail" id="carousel-selector-<%= i %>">
-                            <img src="/images/frames/frame_<%= i %>.jpg">
+                            <img data-src="/images/frames/frame_<%= i %>.jpg" class="lazyload">
                         </a>
               </li>
               <% } %>
@@ -42,10 +42,10 @@
                     <% for(let i = 0; i < 1978; i++) { %>
                       <% if (i == 0) { %>
                         <div class="active item" data-slide-number="<%= i %>">
-                          <img src="/images/frames/frame_<%= i %>.jpg"></div>
+                          <img data-src="/images/frames/frame_<%= i %>.jpg" class="lazyload"></div>
                         <% } %>
                           <div class="item" data-slide-number="<%= i %>">
-                            <img src="/images/frames/frame_<%= i %>.jpg"></div>
+                            <img data-src="/images/frames/frame_<%= i %>.jpg" class="lazyload"></div>
                           <% } %>
 
 
@@ -71,6 +71,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
     crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/javascripts/lazysizes.min.js"></script>
   <script type="text/javascript" src="/javascripts/core.js"></script>
 </body>
 
